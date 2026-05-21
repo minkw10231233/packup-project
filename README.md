@@ -10,7 +10,7 @@ React Router를 활용한 페이지 이동과 반응형 UI를 직접 구현했�
 ## 배포 링크
 
 - GitHub : (깃허브 링크)
-- Demo : (배포 링크)
+- Demo : https://packup-project-ohkq.vercel.app
 
 ---
 
