@@ -4,19 +4,19 @@ function Footer () {
         <div className="footer-content">
           <ul>
             <li>
-              <a href="#" className="footer-link">
+              <button type="button" className="footer-link">
                 개인정보처리방침
-              </a>
+              </button>
             </li>
             <li>
-              <a href="#" className="footer-link">
-                이메일수집거부
-              </a>
+              <button type="button" className="footer-link">
+                이메일 수집 거부
+              </button>
             </li>
-            <li>
-              <a href="#" className="footer-link">
+           <li>
+              <button type="button" className="footer-link">
                 취소 및 환불규정
-              </a>
+              </button>
             </li>
           </ul>
         </div>
