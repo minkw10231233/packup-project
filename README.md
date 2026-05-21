@@ -1,70 +1,82 @@
-# Getting Started with Create React App
+# PackUp 이사 서비스 웹사이트
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+React를 사용해 제작한 반응형 이사 서비스 웹사이트입니다.
 
-## Available Scripts
+사용자가 서비스 종류를 확인하고 상담 신청을 진행할 수 있도록 구현했으며,
+React Router를 활용한 페이지 이동과 반응형 UI를 직접 구현했습니다.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 배포 링크
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- GitHub : (깃허브 링크)
+- Demo : (배포 링크)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 사용 기술
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- React
+- React Router
+- JavaScript
+- CSS
+- Fetch API
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 주요 기능
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- React Router 기반 페이지 이동
+- 서비스 카드 컴포넌트 분리
+- 데이터 기반 리스트 렌더링
+- 상담 신청 폼 유효성 검사
+- Fetch API를 활용한 POST 요청 처리
+- Loading 상태를 활용한 중복 제출 방지
+- FAQ 아코디언 UI 구현
+- 반응형 레이아웃 구현
+- 햄버거 메뉴 및 접근성 처리
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 페이지 구성
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- `/` : 메인 페이지
+- `/only-drive` : 운전만 서비스 소개
+- `/one-help` : 1인 도움 서비스 소개
+- `/two-help` : 2인 도움 서비스 소개
+- `/consult` : 상담 신청 페이지
+- `/complete` : 상담 신청 완료 페이지
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 구현 포인트
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### 컴포넌트 분리
 
-## Learn More
+서비스 카드 영역을 `ServiceCard`, `ServiceList` 컴포넌트로 분리했습니다.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+서비스 데이터는 별도의 `services.js` 파일에서 관리하여 유지보수가 쉽도록 구성했습니다.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 상담 신청 폼
 
-### Code Splitting
+`useState`를 사용해 입력값과 에러 상태를 관리했습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+이름, 연락처, 이메일, 상담 유형에 대한 유효성 검사를 구현했으며,
+Fetch API를 활용해 상담 신청 요청을 처리했습니다.
 
-### Analyzing the Bundle Size
+또한 요청 중에는 버튼을 비활성화하여 중복 제출을 방지했습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 반응형 메뉴
 
-### Making a Progressive Web App
+햄버거 메뉴를 직접 구현했으며,
+ESC 키 입력, 외부 클릭, 닫기 버튼으로 메뉴를 제어할 수 있도록 처리했습니다.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+또한 focus 이동을 적용해 접근성을 고려했습니다.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 개선하고 싶은 점
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- 실제 서버와 연동한 데이터 저장 기능
+- TypeScript 적용
+- 상담 신청 내역 확인 기능 구현
