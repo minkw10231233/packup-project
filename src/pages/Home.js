@@ -18,7 +18,7 @@ function Home() {
                     </p>
 
                     <h1 id="page-title" className="isa-text">
-                    이사 편하게? 팩업 전화 해~
+                    이사, 더 쉽고 편하게.
                     </h1>
 
                     <div className="main-btn">
